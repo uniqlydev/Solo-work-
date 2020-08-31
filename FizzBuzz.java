@@ -1,9 +1,11 @@
 public class FizzBuzz {
     public static void main (String[] args) {
-    int x = 1; 
-    int y = 3;
+    
+        boolean hasTite = true;
+        boolean hasPepe = false;
+        boolean iseligible = hasTite || hasPepe;
 
-    System.out.print(x==y);
+        System.out.print(!iseligible);
 
     }
 }
