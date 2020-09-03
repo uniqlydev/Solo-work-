@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 /* Given two integer arrays A and B of size N.
 There are N gas stations along a circular route, where the amount of gas at station i is A[i].
 
@@ -12,6 +14,25 @@ ending up at i again.*/
 
 public class GasStation {
 
+    public static void main (String [] args){
+        final 
+
+        int [] [] arrays = new int [2] [2];
+        arrays[0][0] = 1;
+        arrays[0][1] = 2;
+        arrays[1][0] = 2;
+        arrays[1][1] = 1;
+
+        System.out.print(Arrays.deepToString(arrays));
+
+
+        
+
+
+
+
+
+    }
     
     
 }
