@@ -5,14 +5,11 @@ public class Method {
         System.out.println("Your number " + x + " is a good number");
     }
     public static void main (String [] args){
-        // Scanner console = new Scanner(System.in);
-        // for (int y = 0; y <3;y++){
-        //     System.out.println("Enter an integer");
-        //     goodboy(console.nextInt());
-        // }
-        // console.close();
-
-        double x = 2.25;
-        System.out.println(Math.ceil(x));
+        Scanner console = new Scanner(System.in);
+        for (int y = 0; y <3;y++){
+            System.out.println("Enter an integer");
+            goodboy(console.nextInt());
+        }
+        console.close();
     }
 }
