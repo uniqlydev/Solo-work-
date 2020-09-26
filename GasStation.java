@@ -26,11 +26,6 @@ public class GasStation {
         System.out.print(Arrays.deepToString(arrays));
 
 
-        
-
-
-
-
 
     }
     
