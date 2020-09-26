@@ -15,8 +15,7 @@ ending up at i again.*/
 public class GasStation {
 
     public static void main (String [] args){
-        final 
-
+        
         int [] [] arrays = new int [2] [2];
         arrays[0][0] = 1;
         arrays[0][1] = 2;
