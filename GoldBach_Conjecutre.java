@@ -17,21 +17,18 @@ public class GoldBach_Conjecutre {
     }
 
     
-    public static void PrimePairsFinder(int num) {
-         for (int x = 1; x<=num;x++) {
-            for (int y = 2; y<=x; y++) {
-                if (x%y == 0)
-                    System.out.println(y);
-            }
-            
-        }
+    public static void PrimeNumberList(int num) {   // Give prime numbers list to be used in Prime list
+       int counter = 0;
+       
+       
     }
+
     public static void main (String[] args) {
     Scanner console = new Scanner(System.in);
     System.out.println("Input a number: ");
     int choice = console.nextInt();
     PrimeChecker(choice);
-    PrimePairsFinder(choice);
+    PrimeNumberList(choice);
 
     
     
