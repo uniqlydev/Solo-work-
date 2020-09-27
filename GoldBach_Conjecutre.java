@@ -1,5 +1,7 @@
 import java.util.Scanner;
 
+// A goldbach conjecture is claim that is 
+
 public class GoldBach_Conjecutre {
     
     public static void PrimeChecker(int num) {
