@@ -3,16 +3,16 @@ import java.util.Scanner;
 public class GoldBach_Conjecutre {
     
     public static void PrimeChecker(int num) {
-        int divisiblecount = 0;
+        int divisiblecount = 2;
         boolean isPrime = true;
-       for(int x = 1; x<=num; x++) {
-       if (x%num == 0)
+       for(int x = 1; x>=num; x++) {
+       if (x%num !=0)
             divisiblecount +=1;
        }
        if (divisiblecount == 2)
        System.out.println("prime");
        else if (divisiblecount!=2)
-       System.out.println("Not a prime");
+       System.out.println("Not a prime"); 
     }
 
     public static void main (String[] args) {
