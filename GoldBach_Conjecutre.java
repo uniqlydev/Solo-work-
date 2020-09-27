@@ -1,24 +1,37 @@
+import java.util.Random;
 import java.util.Scanner;
+import java.util.Arrays;
 
 public class GoldBach_Conjecutre {
-    
-    public static void PrimeChecker(int num) {
-        int divisiblecount = 2;
-        boolean isPrime = true;
-       for(int x = 1; x>=num; x++) {
-       if (x%num !=0)
-            divisiblecount +=1;
-       }
-       if (divisiblecount == 2)
-       System.out.println("prime");
-       else if (divisiblecount!=2)
-       System.out.println("Not a prime");
+
+    public static int[] GetTwoPrimes(int num) {
+        int [] arrayPrime =
+        for (int x = 1; x <= num; x++) {
+            boolean isEven = false;
+            for (int y = 2; y <= x/2; ++y) {
+                if (x%y == 0) {
+                    isEven = true;
+                    break;
+                }
+                }
+            if (isEven != true) {
+                System.out.println(x);
+
+            }
+        }
     }
 
-    public static void main (String[] args) {
-    Scanner console = new Scanner(System.in);
-    PrimeChecker(console.nextInt());
-    
+    public static void GetTwoPairs() {
+        Random rand = new Random();
 
+        int rand1 = rand.nextInt();
+
+    }
+
+
+    public static void main (String[] args) {
+        Scanner console = new Scanner(System.in);
+        System.out.print("Enter a number: ");
+        GetTwoPrimes(console.nextInt());
     }
 }
