@@ -12,7 +12,7 @@ public class GoldBach_Conjecutre {
        if (divisiblecount == 2)
        System.out.println("prime");
        else if (divisiblecount!=2)
-       System.out.println("Not a prime"); 
+       System.out.println("Not a prime");
     }
 
     public static void main (String[] args) {
