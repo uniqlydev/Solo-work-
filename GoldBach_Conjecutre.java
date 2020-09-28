@@ -1,21 +1,10 @@
+import java.util.Random;
 import java.util.Scanner;
-
-
+import java.util.Arrays;
 
 public class GoldBach_Conjecutre {
-    
-    public static void PrimeChecker(int num) {
-        int divisiblecount = 0;
-       for(int x = 1; x<=num; x++) {
-       if (num%x == 0)
-            divisiblecount +=1;
-       }
-       if (divisiblecount == 2)
-       System.out.println("Prime");
-       else if (divisiblecount!=2)
-       System.out.println("Not a prime");
-    }
 
+<<<<<<< HEAD
     
     public static void PrimeNumberList(int num) {   // Give prime numbers list to be used in Prime list
        int counter = 0;
@@ -29,10 +18,36 @@ public class GoldBach_Conjecutre {
     int choice = console.nextInt();
     PrimeChecker(choice);
     PrimeNumberList(choice);
+=======
+    public static int[] GetTwoPrimes(int num) {
+        int [] arrayPrime =
+        for (int x = 1; x <= num; x++) {
+            boolean isEven = false;
+            for (int y = 2; y <= x/2; ++y) {
+                if (x%y == 0) {
+                    isEven = true;
+                    break;
+                }
+                }
+            if (isEven != true) {
+                System.out.println(x);
 
-    
-    
-    
+            }
+        }
+    }
+>>>>>>> 448353b235fbd900f7d8514173008033c41c3418
 
+    public static void GetTwoPairs() {
+        Random rand = new Random();
+
+        int rand1 = rand.nextInt();
+
+    }
+
+
+    public static void main (String[] args) {
+        Scanner console = new Scanner(System.in);
+        System.out.print("Enter a number: ");
+        GetTwoPrimes(console.nextInt());
     }
 }
