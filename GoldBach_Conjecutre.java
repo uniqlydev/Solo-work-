@@ -1,5 +1,4 @@
 import java.util.Scanner;
-import java.util.Arrays;
 import java.util.Random;
 
 public class GoldBach_Conjecutre {
@@ -17,7 +16,7 @@ public class GoldBach_Conjecutre {
                     break;
                 }
                 }
-            if (isEven != true) {
+            if (!isEven) {
                 currNum = x;
                 numbers[primeCount] = currNum;
                 primeCount++;
@@ -40,8 +39,8 @@ public class GoldBach_Conjecutre {
         Random rand = new Random();
         int firstDigit = randomArray[rand.nextInt(num)];
         int secondDigit = randomArray[rand.nextInt(num)];
-        while (true) {
-            if (firstDigit != 0 && secondDigit != 0 && firstDigit != secondDigit && firstDigit + secondDigit == num) {
+        while (true) { // WIll randomize numbers in order to get a combination within the numbers array 
+            if (firstDigit != 0 && secondDigit != 0 && firstDigit != secondDigit && firstDigit + secondDigit == num) { // To avoid 0s and having the same digit. 
                 System.out.println("Goldbach: " + firstDigit + "+" + secondDigit);
                 break;
             }
@@ -54,7 +53,6 @@ public class GoldBach_Conjecutre {
         Scanner console = new Scanner(System.in);
         System.out.print("Enter a number: ");
         int user_Choice = console.nextInt();
-        int numbers [] = GetTwoPrimes(user_Choice);
         ShowPrime(user_Choice);
         GetTwoPairs(user_Choice);
         console.close();
