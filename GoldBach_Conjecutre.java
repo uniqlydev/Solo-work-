@@ -4,12 +4,6 @@ import java.util.Random;
 
 public class GoldBach_Conjecutre {
 
-    public static int Random(int min) {
-        Random rand = new Random();
-        int firstNum = rand.nextInt(min);
-        int secondNum = rand.nextInt(min);
-        return firstNum;
-    }
 
     public static int[] GetTwoPrimes(int num) {
         int primeCount = 0;
@@ -41,12 +35,21 @@ public class GoldBach_Conjecutre {
             }
         }
     }
+    public static void GetTwoPairs(int num) {
+        int [] randomArray = GetTwoPrimes(num);
+        Random rand = new Random();
+        int firstDigit = randomArray[rand.nextInt(num)];
+        int secondDigit = randomArray[rand.nextInt(num)];
+       System.out.println(firstDigit);
+    
+    }
     public static void main (String[] args) {
         Scanner console = new Scanner(System.in);
         System.out.print("Enter a number: ");
         int user_Choice = console.nextInt();
         int numbers [] = GetTwoPrimes(user_Choice);
         ShowPrime(user_Choice);
+        GetTwoPairs(user_Choice);
         console.close();
     }
 }
