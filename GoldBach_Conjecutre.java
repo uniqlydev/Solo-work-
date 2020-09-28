@@ -40,11 +40,12 @@ public class GoldBach_Conjecutre {
         int firstDigit = randomArray[rand.nextInt(num)];
         int secondDigit = randomArray[rand.nextInt(num)];
         while (true) { // WIll randomize numbers in order to get a combination within the numbers array 
+            System.out.println(firstDigit +"+" + secondDigit);
             if (firstDigit != 0 && secondDigit != 0 && firstDigit != secondDigit && firstDigit + secondDigit == num) { // To avoid 0s and having the same digit. 
                 System.out.println("Goldbach: " + firstDigit + "+" + secondDigit);
                 break;
             }
-            firstDigit = randomArray[rand.nextInt(num)];
+            firstDigit = randomArray[rand.nextInt(num)];// if condition not yet true, randomize again. 
             secondDigit = randomArray[rand.nextInt(num)];
         }
            
