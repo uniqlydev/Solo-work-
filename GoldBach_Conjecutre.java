@@ -10,7 +10,7 @@ public class GoldBach_Conjecutre {
         int [] numbers = new int[num];
         for (int x = 1; x <= num; x++) {
             boolean isEven = false;
-            for (int y = 2; y <= x/2; ++y) {
+            for (int y = 2; y <= x/2; ++y) { 
                 if (x%y == 0) {
                     isEven = true;
                     break;
@@ -39,8 +39,9 @@ public class GoldBach_Conjecutre {
         Random rand = new Random();
         int firstDigit = randomArray[rand.nextInt(num)];
         int secondDigit = randomArray[rand.nextInt(num)];
-        while (true) { // WIll randomize numbers in order to get a combination within the numbers array 
-            System.out.println(firstDigit +"+" + secondDigit);
+        while (true) { // WIll randomize numbers in order to get a combination within the numbers array
+            if (firstDigit != 0 && secondDigit != 0 && firstDigit != secondDigit && firstDigit + secondDigit != num)
+                System.out.println("Pairs: " + firstDigit +"," + secondDigit); 
             if (firstDigit != 0 && secondDigit != 0 && firstDigit != secondDigit && firstDigit + secondDigit == num) { // To avoid 0s and having the same digit. 
                 System.out.println("Goldbach: " + firstDigit + "+" + secondDigit);
                 break;
