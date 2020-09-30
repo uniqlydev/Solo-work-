@@ -39,10 +39,9 @@ public class GoldBach_Conjecutre {
         Random rand = new Random();
         int firstDigit = randomArray[rand.nextInt(num)];
         int secondDigit = randomArray[rand.nextInt(num)];
-        
+
         while (true) { // WIll randomize numbers in order to get a combination within the numbers array
-            if (firstDigit != 0 && secondDigit != 0 && firstDigit != secondDigit && firstDigit + secondDigit != num)
-                System.out.println("Pairs: " + firstDigit +"," + secondDigit); 
+            
             if (firstDigit != 0 && secondDigit != 0 && firstDigit != secondDigit && firstDigit + secondDigit == num) { // To avoid 0s and having the same digit. 
                 recentNum = firstDigit;
                 recentNum2 = secondDigit;
