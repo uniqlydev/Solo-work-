@@ -27,7 +27,7 @@ public class Goldbach {
         System.out.println(
             "\ncan be represented as");
         
-        for(int x=2; x<n/2 +1; x++) {
+        for(int x=2; x<num/2 +1; x++) {
             if(isPrime(num) && isPrime(n-i)) {
                 System.out.println(
                   "the sum of two primes = "+
