@@ -2,18 +2,14 @@ import java.util.Scanner;
 
 public class euclidean {
 
-    private static int GetMultiple(int a, int b) { // Check the highest multiple without overlapping the biggernumber 
-       int q;
-        while(true) {
-            q = 1;
-            b = b*q;
-            if (b >= a) break;
+    private static void GetMultiple(int a, int b) { // Check the highest multiple without overlapping the biggernumber 
+       int q = 1;
+        while(a>b) {
+            b *=q;
+            q++;
             System.out.println(q);
-            q++; 
         }
         q--;
-        System.out.println(q);
-        return q;
     }
 
 
@@ -47,11 +43,8 @@ public class euclidean {
         
     }
 
-   
-
     public static void main (String[] args) {
         Scanner console = new Scanner(System.in); 
-        int q = 0;
         GetMultiple(50, 3);
         
     }
