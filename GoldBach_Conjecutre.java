@@ -42,9 +42,6 @@ public class GoldBach_Conjecutre {
         int recentNum = 0;
         int recentNum2 = 0;
         
-
-
-
     while(true) {
         
         for (int x = 0 ; x<=randomArray.length;x++) {
@@ -67,9 +64,7 @@ public class GoldBach_Conjecutre {
         }
       
         }
-    }
-        
-           
+    }     
     }
 
     public static void main (String[] args) {
