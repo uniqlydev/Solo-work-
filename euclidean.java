@@ -12,10 +12,7 @@ public class euclidean {
                 break;
             }
             b = 0;
-            
-         
         }
-        
     }
 
     public static void GetGCD(int num, int num2) {
