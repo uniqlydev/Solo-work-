@@ -18,36 +18,19 @@ public class euclidean {
         
     }
 
-
-    public static void GetGCD(int a,int b) {
-        int biggerNum = a;
-        int smallerNum = b;
-        int q = 0;
-        // int r = GetMultiple(biggerNum, smallerNum,q);
-        
-        if (a>b) {
-            biggerNum = a;
-            smallerNum = b;
+    public static void GetGCD(int num, int num2) {
+        for (int i = 1; i<=num;i++) {
+            int x = 1;
+            boolean divisibility = DivisibleChecker(x, num);
+            boolean divisibility2 =  DivisibleChecker(i, num2);
+            if (divisibility) System.out.println("First num " + i);
+            if (divisibility2) System.out.println("Second num" + x);
+            x++;
         }
-        else {
-            biggerNum = b;
-            smallerNum = a;
-        }
-        // GetMultiple(biggerNum, smallerNum, q); 
-       
         
-        // r = biggerNum - smallerNum*q;
+    } 
 
-
-        //Euclidean Alghorithim -> BiggerNum = SmallerNum * q + r; Where q is the number of multiplication that can be done without overlapping the BiggerNum and r is the remainder. 
-        //The process is simple, we need to move the smaller number to the right and r to the right until r is equal to 0 
-
-       while (true) {
-           biggerNum = smallerNum; 
-       }
-
-        
-    }
+  
 
     public static void main (String[] args) {
         Scanner console = new Scanner(System.in); 
