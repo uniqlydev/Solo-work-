@@ -2,11 +2,17 @@ import java.util.Scanner;
 
 public class euclidean {
 
-    public static boolean DivisibleChecker(int a, int b) {
-        boolean divisbleCheck = false;
-        if (b%a==0) divisbleCheck = true;
-        if (b%a!=0) divisbleCheck = false;
-        return divisbleCheck; 
+    private static void GetMultiple(int a, int b) { // Check the highest multiple without overlapping the biggernumber 
+       int q = 1;
+        while(true) {
+            b*=q;
+            if (b<a) q++;
+            if (b==a) {
+                System.out.println(q);
+                break;
+            }
+            b = 0;
+        }
     }
 
     public static void GetGCD(int num, int num2) {
@@ -21,7 +27,7 @@ public class euclidean {
 
     public static void main (String[] args) {
         Scanner console = new Scanner(System.in); 
-       GetGCD(console.nextInt(),console.nextInt());
+        GetMultiple(20, 3);
         
     }
     
