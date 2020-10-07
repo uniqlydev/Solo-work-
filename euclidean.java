@@ -11,12 +11,8 @@ public class euclidean {
 
     public static void GetGCD(int num, int num2) {
         for (int i = 1; i<=num;i++) {
-            int x = 1;
             boolean divisibility = DivisibleChecker(x, num);
-            boolean divisibility2 =  DivisibleChecker(i, num2);
             if (divisibility) System.out.println("First num " + i);
-            if (divisibility2) System.out.println("Second num" + x);
-            x++;
         }
         
     } 
