@@ -1,34 +1,43 @@
 import java.util.Scanner;
 
 public class euclidean {
-
-    private static void GetMultiple(int a, int b) { // Check the highest multiple without overlapping the biggernumber 
-       int q = 1;
-        while(true) {
-            b*=q;
-            if (b<a) q++;
-            if (b==a) {
-                System.out.println(q);
-                break;
-            }
-            b = 0;
-        }
-    }
-
-    public static void GetGCD(int num, int num2) {
-        for (int i = 1; i<=num;i++) {
-            boolean divisibility = DivisibleChecker(x, num);
-            if (divisibility) System.out.println("First num " + i);
-        }
-        
-    } 
-
-  
-
-    public static void main (String[] args) {
-        Scanner console = new Scanner(System.in); 
-        GetMultiple(20, 3);
-        
-    }
     
+
+    private static boolean DivisibleCheck (int a,int b) {
+        boolean Divisibility = false;
+        if (b%a == 0) Divisibility = true;
+        if (b%a != 0) Divisibility = false;
+        return Divisibility;
+    }
+    public static void Print(int x,int y) {
+        System.out.println("Factors of " + x);
+        for (int i = 1; i<=x;i++) {
+        boolean check = DivisibleCheck(i, x);
+        if (check) System.out.println(i);
+        }
+        System.out.println("--------------------------------------------");
+        System.out.println("Factors of " + y);
+        for (int o = 1;o<=y;o++) {
+            boolean check2 = DivisibleCheck(o, x);
+         if (check2) System.out.println(o);
+        }
+    }
+
+    public static int EuclideanFormula (int a, int b) { // Check for remainder where b = remainder
+        while (b!=0) {
+            int recentNumb = b;
+            b = a%b; // If zerom 
+            a = recentNumb;
+        }
+        return a;
+    }
+    public static void main (String [] args) {
+        Scanner console = new Scanner(System.in);
+        System.out.println("Please enter 2 digits: ");
+        int num1 = console.nextInt();
+        int num2 = console.nextInt();
+        Print(num1,num2);
+        System.out.println("-------------------------------------");
+        System.out.println("GCD: "+EuclideanFormula(num1, num2));
+    }
 }
