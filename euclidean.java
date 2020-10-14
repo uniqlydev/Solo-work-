@@ -9,6 +9,7 @@ public class euclidean {
         if (b%a != 0) Divisibility = false;
         return Divisibility;
     }
+
     public static void Print(int x,int y) {
         System.out.println("Factors of " + x);
         for (int i = 1; i<=x;i++) {
@@ -18,7 +19,7 @@ public class euclidean {
         System.out.println("--------------------------------------------");
         System.out.println("Factors of " + y);
         for (int o = 1;o<=y;o++) {
-            boolean check2 = DivisibleCheck(o, x);
+            boolean check2 = DivisibleCheck(o, y);
          if (check2) System.out.println(o);
         }
     }
