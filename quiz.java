@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class quiz {
 
     
@@ -19,7 +21,8 @@ public class quiz {
 
     public static void main (String[] args) {
         //Wilson's Theorem (n-1)!+1 is divisble by n 
-        WilsonTheorem(5);
+        Scanner scan = new Scanner(System.in);
+        WilsonTheorem(scan.nextInt());
 
     }
     
