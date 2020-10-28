@@ -6,18 +6,18 @@ public class Coprime {
         if (b%a == 0) Divisibility = true;
         if (b%a != 0) Divisibility = false;
         return Divisibility;
-    }
+    } 
 
    public static void Coprime(int x, int y) {
        int xNum = 0;
        int yNum = 0;
        int factors  = 0;
        for (int i = 1;i<=x+y;i++) {
-           if (DivisibleCheck(i, x)) xNum = i;;
+           if (DivisibleCheck(i, x)) xNum = i;
            if (DivisibleCheck(i, y)) yNum = i;
-           if (xNum == yNum) factors++;
+           if (xNum == yNum) factors++; // IF xNum and yNum are the same, factors will increment.
            }
-          String check = factors<=1 ? "It's a coprime" : "Not a coprime";
+          String check = factors<=1 ? "It's a coprime" : "Not a coprime"; // Simplified version of If-else
            System.out.println(check);
        }
 
