@@ -25,9 +25,9 @@ public class euclidean {
     }
 
     public static int EuclideanFormula (int a, int b) { // Check for remainder where b = remainder
-        while (b!=0) {
+        while (b != 0) { 
             int recentNumb = b;
-            b = a%b; // If zerom 
+            b = a % b; // Checks for remainder. 
             a = recentNumb;
         }
         return a;
