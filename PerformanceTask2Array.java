@@ -42,7 +42,9 @@ public class PerformanceTask2Array {
 
 
      System.out.println("Matrix A: " +SquareMatrixChecker(a));
+     System.out.println("---------------------------------------");
      System.out.println("Matrix B: " +SquareMatrixChecker(b));
+     System.out.println("---------------------------------------");
      System.out.println("Matrix C: " +SquareMatrixChecker(c));
     
 
