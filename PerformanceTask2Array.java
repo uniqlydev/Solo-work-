@@ -16,13 +16,7 @@ public class PerformanceTask2Array {
             rowCount = r;
         }
         
-   
-
-
        return isMatrix;
-
-      
-
     }
 
     public static void main (String[] args) {
