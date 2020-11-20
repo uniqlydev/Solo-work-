@@ -1,13 +1,34 @@
 public class SquareMatrices {
 
-    public static void ZeroMatrixChecker(int [][] array) {
+    public static void ZeroMatrixChecker(int [][] array) { //If all numbers inside the array are 0 
 
         int zero = 0;
         for (int row = 0; row <= array.length-1;row++) {
             for (int column = 0;column <= array[row].length-1;column++) if (array[row][column] != 0 ) zero++;
         }
-        if (zero > 0) System.out.println(array +" is not a Zero matrix");
+        if (zero > 0) System.out.println("not a Zero matrix");
     }
+    public static void IdentityMatrixChecker(int [][] array) { // if A == B 
+        boolean br = false;
+        for (int a = 0 ;a<= array.length-1;a++) {
+            for (int column = 0; column <= array[a].length-1;column++) {
+                if (a==column && array[a][column] == 1) {
+                    System.out.println(array[a][column]);
+                }
+                if (a == column && array[a][column] != 1) br = true;
+            }
+            if (br) {
+                System.out.println("Not an Identity Matrix");
+                break;
+            }
+            
+        }
+        
+        
+    }
+
+
+
 
     public static void main (String [] args){
 
@@ -36,6 +57,7 @@ public class SquareMatrices {
         };
 
         ZeroMatrixChecker(A);
-
+        System.out.println("------");
+        IdentityMatrixChecker(A);
     }
 }
