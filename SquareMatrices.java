@@ -7,7 +7,7 @@ public class SquareMatrices {
             for (int column = 0;column <= array[row].length-1;column++) if (array[row][column] != 0 ) zero++;
         }
         if (zero > 0) {
-            System.out.println("not a Zero matrix");
+
         }else diagonalArray = true;
         return diagonalArray;
      
@@ -23,38 +23,49 @@ public class SquareMatrices {
                 if (a == column && array[a][column] != 1) br = true;
             }
             if (br) {
-                System.out.println("Not an Identity Matrix"); 
+                
                 break;  
             }else diagonalArray2 = true;
         }
         return diagonalArray2;
     }
 
-    public static bool DiagonalMatrixChecker(int [][]array) { // All zeroes are non-diagonal
+    public static boolean DiagonalMatrixChecker(int [][]array) { // All non-diagonal entries are 0 
     boolean breaker = false;
         for (int row = 0; row <= array.length-1;row++) {
             for (int columnt = 0; columnt <= array[row].length-1;columnt++) {
-              if (array[row][columnt] != 0) {
-                  breaker = true;
-                  break;
-              }else {
-                  if (row == columnt) System.out.println(array[row][columnt]);
-              }
-              
+                if (array[row][columnt] != 0 ) {
+                    if (row == columnt) {
+                        columnt++;
+                    }
+                    breaker = true;
+                }
+             }
+             if (breaker) breaker = true;
+
+             
             }
-            if (breaker) {
-                
-            }
+           return breaker;
         }
         
-    }
-    public static void Checker(int [][] arr) {
-        if (ZeroMatrixChecker(arr)) System.out.println("It is a Diagonal Matrix");
-        else if (!ZeroMatrixChecker(arr)) {
-            if (IdentityMatrixChecker(arr)) System.out.println("It is a identity matrix");
-            else if (DiagonalMatrixChecker(arr))
-        }
-    }
+    
+
+    public static void UpperTriangularMatrixChecker (int [][]array) {
+        int i, j; 
+        for (i = 0; i < array.length-1; i++){ 
+            for (j = 0; j < array[i].length-1; j++){ 
+                if (i > j) { 
+                    System.out.print("0" + " "); 
+                } 
+                else
+                System.out.print(array[i][j] + " "); 
+            } 
+            System.out.println(); 
+        } 
+    } 
+
+    
+   
 
 
 
@@ -85,6 +96,17 @@ public class SquareMatrices {
             {0,-8,0}
         };
 
-       
+        int [][] x = {
+            {2,6,7},
+            {0,3,8},
+            {0,0,4}
+        };
+
+    //    if (ZeroMatrixChecker(A)) {
+    //        System.out.println("It is a zero matrix hence making it a diagonal matrix,");
+    //    }else if (DiagonalMatrixChecker(A)) {
+    //        System.out.println("It is diagonal matrix");
+    //    }
+    UpperTriangularMatrixChecker(A);
     }
 }
