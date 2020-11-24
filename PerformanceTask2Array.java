@@ -1,4 +1,4 @@
-public class PerformanceTask2Array {
+`public class PerformanceTask2Array {
 
     public static String SquareMatrixChecker(int [][] matrix) {
         // A square matrix is a matrix that has the same number of columns and rows. 
