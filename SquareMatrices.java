@@ -56,20 +56,17 @@ public class SquareMatrices {
         
     public static boolean UpperTriangularMatrixChecker (int [][]array) {
         boolean isUpper = false;
-        boolean breaker = false;
         for (int row = 0; row <= array.length-1;row++) {
-            for (int columnt = 0; columnt <= array[row].length-1;columnt++) {
-                if (row == columnt) {
-                    if (array[row][columnt++] == 0){
-                        breaker = true; 
-                        break;
-                    }
-                }
+            for (int columnt = 0;columnt <= row ;columnt++) {
+               if (array[row][columnt] == 0) {
+                   isUpper = true; 
+               }else if (array[row][columnt] != 0) {
+                   isUpper = false; 
+                   break;
+               }
+              
             }
-            if (breaker) {
-                isUpper = false;
-                break;
-            }else isUpper = true;
+         
         }
         return isUpper;
     } 
@@ -101,14 +98,29 @@ public class SquareMatrices {
         return strictly;
     }
 
+    public static boolean LowerTriangularMatrixChecker(int [][] array) {
+
+        boolean isLower = true;
+        boolean breaker = false;
+        for (int row = 0; row <= array.length-1;row++) {
+            for (int columnt = array[row].length-1;columnt >= 0;columnt--) {
+                   if (array[row][columnt] != 0) isLower = false;
+                   if (row == columnt) break;
+            }
+          
+        }
+        return isLower;
+    }
+
     public static void Checker(int [][] array) {
-       if (!ZeroMatrixChecker(array) && !IdentityMatrixChecker(array) && !DiagonalMatrixChecker(array) && !UpperTriangularMatrixChecker(array) && !StrictlyUpperTriangularMatrixChecker(array)) System.out.println("It is a non-special square matrix");
+       if (!ZeroMatrixChecker(array) && !IdentityMatrixChecker(array) && !DiagonalMatrixChecker(array) && !UpperTriangularMatrixChecker(array) && !StrictlyUpperTriangularMatrixChecker(array) && LowerTriangularMatrixChecker(array)) System.out.println("It is a non-special square matrix");
        else {
            if (ZeroMatrixChecker(array)) System.out.println("It is a zero matrix");
            if (IdentityMatrixChecker(array)) System.out.println("It is an identity matrix");
            if (DiagonalMatrixChecker(array)) System.out.println("It is a diagonal matrix");
            if (UpperTriangularMatrixChecker(array)) System.out.println("It is an upper triangular matrix");
            if (StrictlyUpperTriangularMatrixChecker(array)) System.out.println("It is a strict triangular matrix");
+           if (LowerTriangularMatrixChecker(array)) System.out.println("It is a lower triangular triangle");
        }
     }
     
@@ -140,8 +152,8 @@ public class SquareMatrices {
             {0,-8,0}
         };
 
-       
 
+        
         System.out.println("A");
         Checker(A);
         System.out.println("B");
