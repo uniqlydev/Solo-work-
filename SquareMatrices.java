@@ -40,24 +40,19 @@ public class SquareMatrices {
 
     public static boolean DiagonalMatrixChecker(int [][]array) { // All non-diagonal entries are 0 
         boolean isDiag = false;
-        int zerocounter = 0; 
         for (int row = 0; row <= array.length-1;row++) {
             for (int columnt = 0; columnt <= array[row].length-1;columnt++) {
-                if (array[row][columnt] != 0 ) {
-                    zerocounter++;
-                }
+              if (array[row][columnt] == 0) {
+                  isDiag = true;
+               if (row == columnt) columnt++;
+               else if (columnt > row) break;
+              }
+              }
              }
-           
-            if (zerocounter > 1) {
-                isDiag = false;
-                break;
-            }else {
-                isDiag = true;
-                break;
+             return isDiag;
             }
-            }
-           return isDiag;
-        }
+          
+    
         
     public static boolean UpperTriangularMatrixChecker (int [][]array) {
         boolean isUpper = false;
@@ -156,6 +151,7 @@ public class SquareMatrices {
         System.out.println("D");
         Checker(D);
 
+    
        
   
 
